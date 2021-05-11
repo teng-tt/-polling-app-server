@@ -12,7 +12,7 @@ def helmInit() {
 
 def helmRepo(Map args) {
   println "添加 test repo"
-  sh "helm repo add --username ${args.username} --password ${args.password} test https://mb.akmeng.icu/chartrepo/test"
+  sh "helm repo add --username ${args.username} --password ${args.password} test https://mb.akmeng.icu:32174/chartrepo/test"
 
   println "更新 repo"
   sh "helm repo update"
