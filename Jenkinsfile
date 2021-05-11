@@ -20,7 +20,7 @@ def helmRepo(Map args) {
   println "获取 Chart 包"
   sh """
     helm fetch test/polling
-    tar -xzvf polling-0.1.0.tgz
+    tar -xzvf polling-0.1.1.tgz
     """
 }
 
