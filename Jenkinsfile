@@ -25,7 +25,7 @@ def helmRepo(Map args) {
 }
 
 def helmDeploy(Map args) {
-    helmInit()
+    //helmInit()
     helmRepo(args)
 
     if (args.dry_run) {
