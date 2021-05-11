@@ -11,15 +11,15 @@ def helmInit() {
 }
 
 def helmRepo(Map args) {
-  println "添加 course repo"
-  sh "helm repo add --username ${args.username} --password ${args.password} course https://registry.qikqiak.com/chartrepo/course"
+  println "添加 test repo"
+  sh "helm repo add --username ${args.username} --password ${args.password} test https://mb.akmeng.icu/chartrepo/test"
 
   println "更新 repo"
   sh "helm repo update"
 
   println "获取 Chart 包"
   sh """
-    helm fetch course/polling
+    helm fetch test/polling
     tar -xzvf polling-0.1.0.tgz
     """
 }
