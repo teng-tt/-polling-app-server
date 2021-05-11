@@ -53,7 +53,7 @@ podTemplate(label: label, containers: [
     def gitCommit = myRepo.GIT_COMMIT
     def gitBranch = myRepo.GIT_BRANCH
     def imageTag = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
-    def dockerRegistryUrl = "harbor.admin.com:32174"
+    def dockerRegistryUrl = "mb.akmeng.icu:32174"
     def imageEndpoint = "test/polling-api"
     def image = "${dockerRegistryUrl}/${imageEndpoint}"
 
